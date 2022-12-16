@@ -15,7 +15,7 @@ const CreateWorkout = () => {
     e: React.FormEvent
   ) => {
     e.preventDefault();
-    if (!userLogged) {
+    if (!localStorage.getItem("user")) {
       setError("please login before add new workout");
       return;
     }
